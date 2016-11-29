@@ -58,6 +58,55 @@ updateTime: function updateTime(){
  }.bind(this));
 
   }
-}
+};
 
 timer.clickHandlers();
+
+/*Walk-through optional solution
+
+let timeElapsed = 0;
+let timeElapsedDisplay = document.createElement('span');
+let startButton = document.getElementById('start');
+let resetButton = document.getElementById('reset');
+let pauseButton = document.getElementById('pause');
+let timerText = document.getElementById('timer');
+let isStarted = false;
+
+let startTimer = () => {
+  if ()!isStarted){
+    isStarted = !isStarted;
+    intervalID = window.setInterval (function(){
+      timerText.innerHTML = "Time elapsed: " + timeElapsed;
+      timeElapsed++;
+}, 1000);
+}
+};
+
+startButton.addEventListener('click', startTimer);
+
+
+let resetTimer = () => {
+  isStarted = !isStarted;
+  window.clearInterval (intervalID);
+  timerText.innerHTML = "Stop Watch";
+  timeElapsed = 0;
+
+};
+
+
+
+
+resetButton.addEventListener('click', resetTimer);
+
+let pauseTimer = () => {
+  isStarted = !isStarted;
+  window.clearInterval (intervalID);
+
+};
+
+pauseButton.addEventListener('click', stopTimer);
+
+
+
+
+*/
